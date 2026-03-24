@@ -49,14 +49,14 @@ lvgl:
                   text_font: $icon_font
                   align: top_left
                   id: button_a1_icon
-                  text: $icon-lightbulb
+                  text: $lightbulb
               - label:
                   align: bottom_left
                   id: button_a1_label
                   text: "Living Room Bright"
             on_press:
               - homeassistant.service:
-                  service: scene.toggle
+                  service: switch.toggle
                   data:
                     entity_id: scene.living_room_bright
 
@@ -72,14 +72,14 @@ lvgl:
                   text_font: $icon_font
                   align: top_left
                   id: button_a2_icon
-                  text: $icon-off
+                  text: $nightlight
               - label:
                   align: bottom_left
                   id: button_a2_label
                   text: "Living Room Low"
             on_press:
               - homeassistant.service:
-                  service: scene.toggle
+                  service: switch.toggle
                   data:
                     entity_id: scene.living_room_dimmed
 
@@ -102,7 +102,7 @@ lvgl:
                   text: "Living Room Dim"
             on_press:
               - homeassistant.service:
-                  service: scene.toggle
+                  service: switch.toggle
                   data:
                     entity_id: scene.living_room_super_low
 
@@ -118,16 +118,16 @@ lvgl:
                   text_font: $icon_font
                   align: top_left
                   id: button_a4_icon
-                  text: $nightlight
+                  text: $lightbulb_off
               - label:
                   align: bottom_left
                   id: button_a4_label
-                  text: "A4"
+                  text: "Living Room Off"
             on_press:
               - homeassistant.service:
                   service: switch.toggle
                   data:
-                    entity_id: switch.office_dimmed_stateful_scene
+                    entity_id: scene.living_room_off_scene
 
         # B1
         - button: 

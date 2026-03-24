@@ -22,6 +22,8 @@ font:
       "\U000F089E",  # mdi-battery
       "\U000F07DE",  # mdi-filament
       "\U000F0317",  # mdi-lan
+      "\U000F0425",  # mdi-power
+      "\U000F0E50",  # mdi-lightbulb-off-outline
       ]
 
 # Map icons to names
@@ -42,4 +44,8 @@ substitutions:
   battery:        "\U000F089E"
   filament:       "\U000F07DE"
   lan:            "\U000F0317"
+  power:          "\U000F0425"
+  lightbulb_off:  "\U000F0E50"
+
+
 
