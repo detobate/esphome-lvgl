@@ -62,7 +62,7 @@ binary_sensor:
     on_state:
       then:
         lvgl.widget.update:
-          id: office_scene_evening_button
+          id: button_a3
           state:
             checked: !lambda return x;
 
@@ -74,7 +74,7 @@ binary_sensor:
     on_state:
       then:
         lvgl.widget.update:
-          id: office_scene_dimmed_button
+          id: button_a4
           state:
             checked: !lambda return x;
 
@@ -86,7 +86,7 @@ binary_sensor:
     on_state:
       then:
         lvgl.widget.update:
-          id: office_scene_calls_button
+          id: button_a2
           state:
             checked: !lambda return x;
 
@@ -98,7 +98,7 @@ binary_sensor:
     on_state:
       then:
         lvgl.widget.update:
-          id: office_scene_features_button
+          id: button_a1
           state:
             checked: !lambda return x;
 
@@ -110,14 +110,14 @@ binary_sensor:
     on_state:
       then:
         - lvgl.widget.update:
-            id: printer_power_button
+            id: button_c1
             state:
               checked: !lambda return x;
         - lvgl.widget.update:
-            id: printer_power_icon
+            id: button_c1_icon
             hidden: !lambda return x;
         - lvgl.widget.update:
-            id: print_progress_container
+            id: button_c1_container
             hidden: !lambda return !x;
 
   # Office Aircon
@@ -128,7 +128,7 @@ binary_sensor:
     on_state:
       then:
         lvgl.widget.update:
-          id: office_aircon_button
+          id: button_c3
           state:
             checked: !lambda return x;
 
@@ -140,7 +140,7 @@ binary_sensor:
     on_state:
       then:
         lvgl.widget.update:
-          id: battery_charger_button
+          id: button_c4
           state:
             checked: !lambda return x;
 
@@ -152,14 +152,14 @@ binary_sensor:
     on_state:
       then:
         - lvgl.widget.update:
-            id: filament_heater_button
+            id: button_c1
             state:
               checked: !lambda return x;
         - lvgl.widget.update:
-            id: filament_heater_icon
+            id: button_c1_icon
             hidden: !lambda return x;
         - lvgl.widget.update:
-            id: dryer_humidity_container
+            id: button_c1_container
             hidden: !lambda return !x;
 
   # Office Blind 100% (Open)
@@ -173,7 +173,7 @@ binary_sensor:
     on_state:
       then:
         lvgl.widget.update:
-          id: office_blind_open_button
+          id: button_b1
           state:
             checked: !lambda return x;
 
@@ -188,7 +188,7 @@ binary_sensor:
     on_state:
       then:
         lvgl.widget.update:
-          id: office_blind_66_button
+          id: button_b2
           state:
             checked: !lambda return x;
 
@@ -203,7 +203,7 @@ binary_sensor:
     on_state:
       then:
         lvgl.widget.update:
-          id: office_blind_33_button
+          id: button_b3
           state:
             checked: !lambda return x;
 
@@ -218,7 +218,7 @@ binary_sensor:
     on_state:
       then:
         lvgl.widget.update:
-          id: office_blind_close_button
+          id: button_b4
           state:
             checked: !lambda return x;
 
@@ -230,7 +230,7 @@ binary_sensor:
     on_state:
       then:
         lvgl.widget.update:
-          id: storage_lights_button
+          id: button_d1
           state:
             checked: !lambda return x;
 
@@ -242,6 +242,29 @@ binary_sensor:
     on_state:
       then:
         lvgl.widget.update:
-          id: network_rack_button
+          id: button_d2
+          state:
+            checked: !lambda return x;
+
+  # D3
+  - platform: homeassistant
+    id: network_rack2
+    entity_id: light.office_network_rack
+    trigger_on_initial_state: true
+    on_state:
+      then:
+        lvgl.widget.update:
+          id: button_d3
+          state:
+            checked: !lambda return x;
+  # D4
+  - platform: homeassistant
+    id: network_rack3
+    entity_id: light.office_network_rack
+    trigger_on_initial_state: true
+    on_state:
+      then:
+        lvgl.widget.update:
+          id: button_d4
           state:
             checked: !lambda return x;

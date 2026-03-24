@@ -111,13 +111,13 @@ lvgl:
             height: $button_height_single
             width: $button_width
             checkable: true
-            id: button_a4_button
+            id: button_a4
             styles: control
             widgets:
               - label:
                   text_font: $icon_font
                   align: top_left
-                  id: obutton_a4_icon
+                  id: button_a4_icon
                   text: $nightlight
               - label:
                   align: bottom_left
@@ -235,7 +235,7 @@ lvgl:
               # Progress (shown when ON)
               - obj:
                   align: top_left
-                  id: button_c1_progress_container
+                  id: button_c1_container
                   height: SIZE_CONTENT
                   width: SIZE_CONTENT
                   clickable: false
