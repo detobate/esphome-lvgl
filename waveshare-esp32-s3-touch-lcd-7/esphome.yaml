@@ -1,8 +1,8 @@
 # ESP32-S3-Touch-LCD-7
 substitutions:
-  name: "your-device-name"
-  friendly_name: "Your Room Sensor"
-  room: "Your Room"
+  name: "waveshare-esp32"
+  friendly_name: "Waveshare ESP32-S3 Touch LCD 7"
+  room: "Living Room"
 
 # Wifi Setup
 wifi:
@@ -12,6 +12,6 @@ wifi:
 # Packages
 packages:
   setup:
-    url: https://github.com/jtenniswood/esphome-lvgl/
+    url: https://github.com/detobate/esphome-lvgl/
     file: waveshare-esp32-s3-touch-lcd-7/package.yaml
     refresh: 1sec
