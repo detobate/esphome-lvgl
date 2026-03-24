@@ -26,12 +26,19 @@ sensor:
   - platform: copy
     source_id: wifi_signal_db
     name: "Wifi Strength"
+    id: wifi_strength
     filters:
       - lambda: return min(max(2 * (x + 100.0), 0.0), 100.0);
     unit_of_measurement: "%"
     icon: mdi:wifi
     entity_category: "diagnostic"
     device_class: ""
+    on_value:
+      - lvgl.label.update:
+          id: wifi_strength_label
+          text:
+            format: "%d%%"
+            args: [ 'x' ]
 
 
 text_sensor:
