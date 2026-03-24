@@ -38,7 +38,7 @@ sensor:
           id: display_wifi
           text:
             format: "%s"
-            args: [ 'x' ]
+            args: [ 'x.c_str()' ]
 
 
 text_sensor:
