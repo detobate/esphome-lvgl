@@ -49,16 +49,16 @@ lvgl:
                   text_font: $icon_font
                   align: top_left
                   id: button_a1_icon
-                  text: $ledstrip
+                  text: $icon-lightbulb
               - label:
                   align: bottom_left
                   id: button_a1_label
-                  text: "A1"
+                  text: "Living Room Bright"
             on_press:
               - homeassistant.service:
-                  service: switch.toggle
+                  service: scene.toggle
                   data:
-                    entity_id: switch.office_features_stateful_scene
+                    entity_id: scene.living_room_bright
 
         # A2
         - button: 
@@ -72,16 +72,16 @@ lvgl:
                   text_font: $icon_font
                   align: top_left
                   id: button_a2_icon
-                  text: $videocall
+                  text: $icon-off
               - label:
                   align: bottom_left
                   id: button_a2_label
-                  text: "A2"
+                  text: "Living Room Low"
             on_press:
               - homeassistant.service:
-                  service: switch.toggle
+                  service: scene.toggle
                   data:
-                    entity_id: switch.office_calls_stateful_scene
+                    entity_id: scene.living_room_dimmed
 
         # A3
         - button: 
@@ -99,12 +99,12 @@ lvgl:
               - label:
                   align: bottom_left
                   id: button_a3_label
-                  text: "A3"
+                  text: "Living Room Dim"
             on_press:
               - homeassistant.service:
-                  service: switch.toggle
+                  service: scene.toggle
                   data:
-                    entity_id: switch.office_evening_stateful_scene
+                    entity_id: scene.living_room_super_low
 
         # A4
         - button: 

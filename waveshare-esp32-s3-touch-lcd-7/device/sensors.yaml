@@ -8,7 +8,7 @@ sensor:
       - lvgl.label.update:
           id: temperatures
           text:
-            format: "%d° / %d°"
+            format: "Indoors: %d°C / Outdoors: %d°C"
             args: [ '(int)round(x)', '(int)round(id(outdoor_temperature).state)' ]
 
 
@@ -19,7 +19,7 @@ sensor:
       - lvgl.label.update:
           id: temperatures
           text:
-            format: "%d° / %d°"
+            format: "Indoors: %d°C / Outdoors: %d°C"
             args: [ '(int)round(id(dining_room_temperature).state)', '(int)round(x)' ]
 
   # Office Blind Position
