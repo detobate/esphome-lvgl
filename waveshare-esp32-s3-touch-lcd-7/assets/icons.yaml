@@ -24,6 +24,7 @@ font:
       "\U000F0317",  # mdi-lan
       "\U000F0425",  # mdi-power
       "\U000F0E50",  # mdi-lightbulb-off-outline
+      "\U000F05A9",  # mdi-wifi
       ]
 
 # Map icons to names
@@ -46,6 +47,7 @@ substitutions:
   lan:            "\U000F0317"
   power:          "\U000F0425"
   lightbulb_off:  "\U000F0E50"
+  wifi:           "\U000F05A9"
 
 
 

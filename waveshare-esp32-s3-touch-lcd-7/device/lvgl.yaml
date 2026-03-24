@@ -25,7 +25,7 @@ lvgl:
 
       # Wifi
       - label:
-          text: "---%"
+          text: "$wifi ---%"
           id: display_wifi
           styles: roboto15_style
           align: top_right
