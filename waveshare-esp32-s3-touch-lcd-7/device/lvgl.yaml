@@ -37,105 +37,104 @@ lvgl:
       pad_right: 5
       
       widgets:
-      
-        # Office Features Scene
+        # A1
         - button: 
             height: $button_height_single
             width: $button_width
             checkable: true
-            id: office_scene_features_button
+            id: button_a1
             styles: control
             widgets:
               - label:
                   text_font: $icon_font
                   align: top_left
-                  id: scene_features_icon                
+                  id: button_a1_icon
                   text: $ledstrip
               - label:
                   align: bottom_left
-                  id: scene_features_label
-                  text: "Features"
+                  id: button_a1_label
+                  text: "A1"
             on_press:
               - homeassistant.service:
                   service: switch.toggle
                   data:
                     entity_id: switch.office_features_stateful_scene
 
-        # Office Calls Scene
+        # A2
         - button: 
             height: $button_height_single
             width: $button_width
             checkable: true
-            id: office_scene_calls_button
+            id: button_a2
             styles: control
             widgets:
               - label:
                   text_font: $icon_font
                   align: top_left
-                  id: office_scene_calls_icon                
+                  id: button_a2_icon
                   text: $videocall
               - label:
                   align: bottom_left
-                  id: office_scene_calls_label
-                  text: "Calls"
+                  id: button_a2_label
+                  text: "A2"
             on_press:
               - homeassistant.service:
                   service: switch.toggle
                   data:
                     entity_id: switch.office_calls_stateful_scene
 
-        # Office Evening Scene
+        # A3
         - button: 
             height: $button_height_single
             width: $button_width
             checkable: true
-            id: office_scene_evening_button
+            id: button_a3
             styles: control
             widgets:
               - label:
                   text_font: $icon_font
                   align: top_left
-                  id: office_scene_evening_icon                
+                  id: button_a3_icon
                   text: $nightlight
               - label:
                   align: bottom_left
-                  id: office_scene_evening_label
-                  text: "Evening"
+                  id: button_a3_label
+                  text: "A3"
             on_press:
               - homeassistant.service:
                   service: switch.toggle
                   data:
                     entity_id: switch.office_evening_stateful_scene
 
-        # Office Dimmed Scene
+        # A4
         - button: 
             height: $button_height_single
             width: $button_width
             checkable: true
-            id: office_scene_dimmed_button
+            id: button_a4_button
             styles: control
             widgets:
               - label:
                   text_font: $icon_font
                   align: top_left
-                  id: office_scene_dimmed_icon                
+                  id: obutton_a4_icon
                   text: $nightlight
               - label:
                   align: bottom_left
-                  id: office_scene_dimmed_label
-                  text: "Dimmed"
+                  id: button_a4_label
+                  text: "A4"
             on_press:
               - homeassistant.service:
                   service: switch.toggle
                   data:
                     entity_id: switch.office_dimmed_stateful_scene
 
-        # Office Blind 100%
+        # B1
         - button: 
             height: $button_height_single
             width: $button_width
             checkable: true
-            id: office_blind_open_button
+            id: button_b1
             styles: control
             widgets:
               - label:
@@ -144,7 +143,7 @@ lvgl:
                   text: $blinds_open
               - label:
                   align: bottom_left
-                  text: "Open"
+                  text: "B1"
             on_click:
               - homeassistant.service:
                   service: cover.set_cover_position
@@ -152,12 +151,12 @@ lvgl:
                     entity_id: cover.office_blind
                     position: "100"
 
-        # Office Blind 66%
+        # B2
         - button: 
             height: $button_height_single
             width: $button_width
             checkable: true
-            id: office_blind_66_button
+            id: button_b2
             styles: control
             widgets:
               - label:
@@ -166,7 +165,7 @@ lvgl:
                   text: $blinds_open
               - label:
                   align: bottom_left
-                  text: "Semi Open"
+                  text: "B2"
             on_click:
               - homeassistant.service:
                   service: cover.set_cover_position
@@ -174,12 +173,12 @@ lvgl:
                     entity_id: cover.office_blind
                     position: "66"
 
-        # Office Blind 33%
+        # B3
         - button: 
             height: $button_height_single
             width: $button_width
             checkable: true
-            id: office_blind_33_button
+            id: button_b3
             styles: control
             widgets:
               - label:
@@ -188,7 +187,7 @@ lvgl:
                   text: $blinds_open
               - label:
                   align: bottom_left
-                  text: "Semi Closed"
+                  text: "B3"
             on_click:
               - homeassistant.service:
                   service: cover.set_cover_position
@@ -196,12 +195,12 @@ lvgl:
                     entity_id: cover.office_blind
                     position: "33"
 
-        # Office Blind 0%
+        # B4
         - button: 
             height: $button_height_single
             width: $button_width
             checkable: true
-            id: office_blind_close_button
+            id: button_b4
             styles: control
             widgets:
               - label:
@@ -210,7 +209,7 @@ lvgl:
                   text: $blinds_closed
               - label:
                   align: bottom_left
-                  text: "Close"
+                  text: "B4"
             on_click:
               - homeassistant.service:
                   service: cover.set_cover_position
@@ -219,24 +218,24 @@ lvgl:
                     position: "0"
 
 
-        # 3d Printer
+        # C1
         - button: 
             height: $button_height_single
             width: $button_width
             checkable: true
-            id: printer_power_button
+            id: button_c1
             styles: control
             widgets:
               # Icon (shown when OFF)
               - label:
                   text_font: $icon_font
                   align: top_left
-                  id: printer_power_icon
+                  id: button_c1_icon
                   text: $printer
               # Progress (shown when ON)
               - obj:
                   align: top_left
-                  id: print_progress_container
+                  id: button_c1_progress_container
                   height: SIZE_CONTENT
                   width: SIZE_CONTENT
                   clickable: false
@@ -260,31 +259,31 @@ lvgl:
                         text: "%"
               - label:
                   align: bottom_left
-                  text: "Printer"
+                  text: "C1"
             on_click:
               - homeassistant.service:
                   service: switch.toggle
                   data:
                     entity_id: switch.office_3d_printer_power
 
-        # Filament Heater
+        # C2
         - button: 
             height: $button_height_single
             width: $button_width
             checkable: true
-            id: filament_heater_button
+            id: button_c2
             styles: control
             widgets:
               # Icon (shown when OFF)
               - label:
                   text_font: $icon_font
                   align: top_left
-                  id: filament_heater_icon
+                  id: button_c2_icon
                   text: $filament
               # Humidity (shown when ON)
               - obj:
                   align: top_left
-                  id: dryer_humidity_container
+                  id: button_c2_container
                   height: SIZE_CONTENT
                   width: SIZE_CONTENT
                   clickable: false
@@ -308,19 +307,19 @@ lvgl:
                         text: "%"
               - label:
                   align: bottom_left
-                  text: "Dryer"
+                  text: "C2"
             on_click:
               - homeassistant.service:
                   service: switch.toggle
                   data:
                     entity_id: switch.office_filament_heater_893b
 
-        # Office Aircon
+        # C3
         - button: 
             height: $button_height_single
             width: $button_width
             checkable: true
-            id: office_aircon_button
+            id: button_c3
             styles: control
             widgets:
               - label:
@@ -329,74 +328,120 @@ lvgl:
                   text: $aircon
               - label:
                   align: bottom_left
-                  text: "Aircon"
+                  text: "C3"
             on_click:
               - homeassistant.service:
                   service: script.office_air_conditioner
 
-        # Battery Charger
+        # C4
         - button: 
             height: $button_height_single
             width: $button_width
             checkable: true
-            id: battery_charger_button
+            id: button_c4
             styles: control
             widgets:
               - label:
                   text_font: $icon_font
                   align: top_left
-                  id: battery_charger_icon
+                  id: button_c4_icon
                   text: $battery
               - label:
                   align: bottom_left
-                  id: battery_charger_label
-                  text: "Charger"
+                  id: button_c4_label
+                  text: "C4"
             on_click:
               - homeassistant.service:
                   service: switch.toggle
                   data:
                     entity_id: switch.battery_charger
 
-        # Storage Lights
+        # D1
         - button: 
             height: $button_height_single
             width: $button_width
             checkable: true
-            id: storage_lights_button
+            id: button_d1
             styles: control
             widgets:
               - label:
                   text_font: $icon_font
                   align: top_left
-                  id: storage_lights_icon
+                  id: button_d1_icon
                   text: $package
               - label:
                   align: bottom_left
-                  id: storage_lights_label
-                  text: "Storage"
+                  id: button_d1_label
+                  text: "D1"
             on_click:
               - homeassistant.service:
                   service: light.toggle
                   data:
                     entity_id: light.office_storage
 
-        # Network Rack
+        # D2
         - button: 
             height: $button_height_single
             width: $button_width
             checkable: true
-            id: network_rack_button
+            id: button_d2
             styles: control
             widgets:
               - label:
                   text_font: $icon_font
                   align: top_left
-                  id: network_rack_icon
+                  id: button_d2_icon
                   text: $network
               - label:
                   align: bottom_left
-                  id: network_rack_label
-                  text: "Network Rack"
+                  id: button_d2_label
+                  text: "D2"
+            on_click:
+              - homeassistant.service:
+                  service: light.toggle
+                  data:
+                    entity_id: light.office_network_rack
+
+        # D3
+        - button:
+            height: $button_height_single
+            width: $button_width
+            checkable: true
+            id: button_d3
+            styles: control
+            widgets:
+              - label:
+                  text_font: $icon_font
+                  align: top_left
+                  id: button_d3_icon
+                  text: $package
+              - label:
+                  align: bottom_left
+                  id: button_d3_label
+                  text: "D3"
+            on_click:
+              - homeassistant.service:
+                  service: light.toggle
+                  data:
+                    entity_id: light.office_storage
+
+        #
+        - button:
+            height: $button_height_single
+            width: $button_width
+            checkable: true
+            id: button_d4
+            styles: control
+            widgets:
+              - label:
+                  text_font: $icon_font
+                  align: top_left
+                  id: button_d4_icon
+                  text: $network
+              - label:
+                  align: bottom_left
+                  id: button_d4_label
+                  text: "D4"
             on_click:
               - homeassistant.service:
                   service: light.toggle

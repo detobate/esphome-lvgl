@@ -1,25 +1,26 @@
 sensor:
 
-  # Header Outdoor Temperate
+  # Header Temperatures
   - platform: homeassistant
-    entity_id: sensor.office_temperature
-    id: office_temperature
+    entity_id: sensor.dining_room_temperature
+    id: dining_room_temperature
     on_value:
       - lvgl.label.update:
           id: temperatures
           text:
             format: "%d° / %d°"
-            args: [ '(int)round(id(outdoor_temperature).state)', '(int)round(x)' ]
+            args: [ '(int)round(x)', '(int)round(id(outdoor_temperature).state)' ]
+
 
   - platform: homeassistant
-    entity_id: sensor.outdoor_temperature
+    entity_id: sensor.porch_outdoor_motion_sensor_1_temperature
     id: outdoor_temperature
     on_value:
       - lvgl.label.update:
           id: temperatures
           text:
             format: "%d° / %d°"
-            args: [ '(int)round(x)', '(int)round(id(office_temperature).state)' ]
+            args: [ '(int)round(id(dining_room_temperature).state)', '(int)round(x)' ]
 
   # Office Blind Position
   - platform: homeassistant
