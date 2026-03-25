@@ -23,27 +23,32 @@ lvgl:
           text_align: center
           text_color: 0xFFFFFF
 
-      # Wifi
-      - label:
-          text: "$wifi"
-          id: display_wifi_icon
-          styles:
-            - icon_font_small_style
-            - pad_right: 6
+     # Wifi Container
+      - obj:
           align: top_right
-          x: 0
+          x: -8
           y: 4
-          text_align: left
-          text_color: 0xFFFFFF
-      - label:
-          text: "---%"
-          id: display_wifi
-          styles: roboto15_style
-          align: top_right
-          x: 0
-          y: 4
-          text_align: right
-          text_color: 0xFFFFFF
+          width: SIZE_CONTENT
+          height: SIZE_CONTENT
+          bg_opa: TRANSP
+          border_width: 0
+          pad_all: 0
+          layout:
+            type: flex
+            flex_flow: row
+          widgets:
+            - label:
+                text: "$wifi"
+                id: display_wifi_icon
+                styles: icon_font_small_style
+                text_color: 0xFFFFFF
+            - label:
+                text: "---%"
+                id: display_wifi
+                styles:
+                  - roboto15_style
+                  - pad_left: 5
+                text_color: 0xFFFFFF
 
   pages:
     - id: main_page
