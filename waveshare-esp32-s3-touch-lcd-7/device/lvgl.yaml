@@ -45,9 +45,7 @@ lvgl:
             - label:
                 text: "---%"
                 id: display_wifi
-                styles:
-                  - roboto15_style
-                  - pad_left: 5
+                styles: roboto15_style
                 text_color: 0xFFFFFF
 
   pages:
