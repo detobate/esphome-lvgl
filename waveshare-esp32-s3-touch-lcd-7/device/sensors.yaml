@@ -28,17 +28,6 @@ sensor:
     id: office_blind_position
     attribute: current_position
 
-  # Centauri Carbon Print Progress
-  - platform: homeassistant
-    entity_id: sensor.centauri_carbon_percent_complete_helper
-    id: centauri_carbon_percent
-    on_value:
-      - lvgl.label.update:
-          id: print_progress_label
-          text:
-            format: "%.0f"
-            args: [ 'x' ]
-
   # Filament Heater Humidity
   - platform: homeassistant
     entity_id: sensor.office_filament_heater_sensor_humidity
