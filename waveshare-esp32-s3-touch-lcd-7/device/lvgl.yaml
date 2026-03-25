@@ -33,6 +33,8 @@ lvgl:
           y: 4
           text_align: left
           text_color: 0xFFFFFF
+          text_letter_space: 6
+          text_size: 15
       - label:
           text: "---%"
           id: display_wifi
