@@ -27,14 +27,13 @@ lvgl:
       - label:
           text: "$wifi"
           id: display_wifi_icon
-          styles: icon_font_style
+          styles: icon_font_small_style
           align: top_right
           x: 0
           y: 4
           text_align: left
           text_color: 0xFFFFFF
-          text_letter_space: 6
-          text_size: 15
+          pad_right: 6
       - label:
           text: "---%"
           id: display_wifi

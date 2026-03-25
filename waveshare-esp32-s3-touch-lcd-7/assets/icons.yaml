@@ -26,6 +26,13 @@ font:
       "\U000F0E50",  # mdi-lightbulb-off-outline
       "\U000F05A9",  # mdi-wifi
       ]
+  - file: 'https://github.com/Templarian/MaterialDesign-Webfont/raw/v7.4.47/fonts/materialdesignicons-webfont.ttf'
+    id: icon_font_small
+    size: 15
+    bpp: 4
+    glyphs: [
+      "\U000F05A9",  # mdi-wifi
+      ]
 
 # Map icons to names
 substitutions:
