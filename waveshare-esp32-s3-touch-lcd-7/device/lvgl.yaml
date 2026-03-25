@@ -247,49 +247,21 @@ lvgl:
         - button: 
             height: $button_height_single
             width: $button_width
-            checkable: true
+            checkable: false
             id: button_c1
             styles: control
             widgets:
               # Icon (shown when OFF)
               - label:
                   text_font: $icon_font
-                  align: top_left
+                  align: center
                   id: button_c1_icon
-                  text: $printer
-              # Progress (shown when ON)
-              - obj:
-                  align: top_left
-                  id: button_c1_container
-                  height: SIZE_CONTENT
-                  width: SIZE_CONTENT
-                  clickable: false
-                  layout:
-                    type: flex
-                    flex_flow: row
-                    flex_align_cross: end
-                  bg_opa: TRANSP
-                  border_width: 0
-                  pad_all: 0
-                  hidden: true
-                  widgets:
-                    - label:
-                        text_font: roboto36_font
-                        text_color: 0xFFFFFF
-                        id: print_progress_label
-                        text: "--"
-                    - label:
-                        text_font: roboto17_font
-                        text_color: 0xFFFFFF
-                        text: "%"
-              - label:
-                  align: bottom_left
-                  text: "C1"
+                  text: $power
             on_click:
-              - homeassistant.service:
-                  service: switch.toggle
+              - homeassistant.action:
+                  action: automation.trigger
                   data:
-                    entity_id: switch.office_3d_printer_power
+                    entity_id: automation.lgtv_power_toggle
 
         # C2
         - button: 
@@ -450,7 +422,7 @@ lvgl:
                   data:
                     entity_id: light.office_storage
 
-        #
+        # D4
         - button:
             height: $button_height_single
             width: $button_width
@@ -467,6 +439,94 @@ lvgl:
                   align: bottom_left
                   id: button_d4_label
                   text: "D4"
+            on_click:
+              - homeassistant.service:
+                  service: light.toggle
+                  data:
+                    entity_id: light.office_network_rack
+        # E1
+        - button:
+            height: $button_height_single
+            width: $button_width
+            checkable: true
+            id: button_e1
+            styles: control
+            widgets:
+              - label:
+                  text_font: $icon_font
+                  align: top_left
+                  id: button_e1_icon
+                  text: $network
+              - label:
+                  align: bottom_left
+                  id: button_e1_label
+                  text: "E1"
+            on_click:
+              - homeassistant.service:
+                  service: light.toggle
+                  data:
+                    entity_id: light.office_network_rack
+        # E2
+        - button:
+            height: $button_height_single
+            width: $button_width
+            checkable: true
+            id: button_e2
+            styles: control
+            widgets:
+              - label:
+                  text_font: $icon_font
+                  align: top_left
+                  id: button_e2_icon
+                  text: $network
+              - label:
+                  align: bottom_left
+                  id: button_e2_label
+                  text: "E2"
+            on_click:
+              - homeassistant.service:
+                  service: light.toggle
+                  data:
+                    entity_id: light.office_network_rack
+        # E3
+        - button:
+            height: $button_height_single
+            width: $button_width
+            checkable: true
+            id: button_e3
+            styles: control
+            widgets:
+              - label:
+                  text_font: $icon_font
+                  align: top_left
+                  id: button_e3_icon
+                  text: $network
+              - label:
+                  align: bottom_left
+                  id: button_e3_label
+                  text: "E3"
+            on_click:
+              - homeassistant.service:
+                  service: light.toggle
+                  data:
+                    entity_id: light.office_network_rack
+        # E4
+        - button:
+            height: $button_height_single
+            width: $button_width
+            checkable: true
+            id: button_e4
+            styles: control
+            widgets:
+              - label:
+                  text_font: $icon_font
+                  align: top_left
+                  id: button_e4_icon
+                  text: $network
+              - label:
+                  align: bottom_left
+                  id: button_e4_label
+                  text: "E4"
             on_click:
               - homeassistant.service:
                   service: light.toggle
