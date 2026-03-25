@@ -27,7 +27,7 @@ lvgl:
       - label:
           text: "$wifi"
           id: display_wifi_icon
-          styles: icon_font
+          styles: icon_font_style
           align: top_right
           x: 0
           y: 4
