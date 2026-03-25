@@ -18,3 +18,5 @@ lvgl:
   style_definitions:
     - id: roboto15_style
       text_font: roboto15_font
+    - id: icon_font_style
+      text_font: icon_font
