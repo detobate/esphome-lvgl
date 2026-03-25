@@ -25,13 +25,22 @@ lvgl:
 
       # Wifi
       - label:
+          text: "$wifi"
+          id: display_wifi_icon
+          styles: icon_font
+          align: top_right
+          x: 0
+          y: 4
+          text_align: left
+          text_color: 0xFFFFFF
+      - label:
           text: "---%"
           id: display_wifi
           styles: roboto15_style
           align: top_right
           x: 0
           y: 4
-          text_align: center
+          text_align: right
           text_color: 0xFFFFFF
 
   pages:
