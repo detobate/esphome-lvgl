@@ -66,24 +66,20 @@ lvgl:
         - button:
             height: $button_height_single
             width: $button_width
-            checkable: true
+            checkable: false
             id: button_a1
             styles: control
             widgets:
               - label:
-                  text_font: $icon_font
-                  align: top_left
+                  text_font: $icon_font_large
+                  align: center
                   id: button_a1_icon
-                  text: $lightbulb
-              - label:
-                  align: bottom_left
-                  id: button_a1_label
-                  text: "Living Room High"
-            on_press:
+                  text: $power
+            on_click:
               - homeassistant.action:
-                  action: switch.toggle
+                  action: automation.trigger
                   data:
-                    entity_id: scene.living_room_bright
+                    entity_id: automation.lgtv_power_toggle
 
         # A2
         - button: 
@@ -157,12 +153,13 @@ lvgl:
                   text_font: $icon_font_large
                   align: center
                   id: button_b1_icon
-                  text: $power
+                  text: $youtube
+                  text_color: red
             on_click:
               - homeassistant.action:
                   action: automation.trigger
                   data:
-                    entity_id: automation.lgtv_power_toggle
+                    entity_id: automation.android_tv_youtube_on
 
         # B2
         - button: 
@@ -239,7 +236,7 @@ lvgl:
               - homeassistant.action:
                   action: automation.trigger
                   data:
-                    entity_id: automation.lg_tv_source_plex
+                    entity_id: automation.android_tv_plex_on
 
         # C2
         - button: 
@@ -315,7 +312,7 @@ lvgl:
               - homeassistant.action:
                   action: automation.trigger
                   data:
-                    entity_id: automation.lg_tv_source_netflix
+                    entity_id: automation.android_tv_netflix_on
         # D2
         - button:
             height: $button_height_single
@@ -386,7 +383,7 @@ lvgl:
               - label:
                   align: bottom_left
                   id: button_e1_label
-                  text: "Living Room Bright"
+                  text: "Living Room High"
             on_press:
               - homeassistant.action:
                   action: scene.toggle
