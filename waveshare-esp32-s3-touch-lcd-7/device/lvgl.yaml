@@ -252,7 +252,7 @@ lvgl:
             styles: control
             widgets:
               - label:
-                  text_font: $icon_font
+                  text_font: $icon_font_large
                   align: center
                   id: button_c1_icon
                   text: $power
@@ -271,7 +271,7 @@ lvgl:
             styles: control
             widgets:
               - label:
-                  text_font: $icon_font
+                  text_font: $icon_font_large
                   align: center
                   id: button_c2_icon
                   text: $home
@@ -290,7 +290,7 @@ lvgl:
             styles: control
             widgets:
               - label:
-                  text_font: $icon_font
+                  text_font: $icon_font_large
                   align: center
                   id: button_c3_icon
                   text: $left
@@ -309,7 +309,7 @@ lvgl:
             styles: control
             widgets:
               - label:
-                  text_font: $icon_font
+                  text_font: $icon_font_large
                   align: center
                   id: button_c4_icon
                   text: $back
@@ -328,7 +328,7 @@ lvgl:
             styles: control
             widgets:
               - label:
-                  text_font: $icon_font
+                  text_font: $icon_font_large
                   align: center
                   id: button_d1_icon
                   text: $plex
@@ -347,7 +347,7 @@ lvgl:
             styles: control
             widgets:
               - label:
-                  text_font: $icon_font
+                  text_font: $icon_font_large
                   align: center
                   id: button_d2_icon
                   text: $up
@@ -366,7 +366,7 @@ lvgl:
             styles: control
             widgets:
               - label:
-                  text_font: $icon_font
+                  text_font: $icon_font_large
                   align: center
                   id: button_d3_icon
                   text: $ok
@@ -385,7 +385,7 @@ lvgl:
             styles: control
             widgets:
               - label:
-                  text_font: $icon_font
+                  text_font: $icon_font_large
                   align: center
                   id: button_d4_icon
                   text: $down
@@ -403,7 +403,7 @@ lvgl:
             styles: control
             widgets:
               - label:
-                  text_font: $icon_font
+                  text_font: $icon_font_large
                   align: center
                   id: button_e1_icon
                   text: $netflix
@@ -421,7 +421,7 @@ lvgl:
             styles: control
             widgets:
               - label:
-                  text_font: $icon_font
+                  text_font: $icon_font_large
                   align: center
                   id: button_e2_icon
                   text: $play_pause
@@ -439,7 +439,7 @@ lvgl:
             styles: control
             widgets:
               - label:
-                  text_font: $icon_font
+                  text_font: $icon_font_large
                   align: center
                   id: button_e3_icon
                   text: $right
@@ -457,7 +457,7 @@ lvgl:
             styles: control
             widgets:
               - label:
-                  text_font: $icon_font
+                  text_font: $icon_font_large
                   align: center
                   id: button_e4_icon
                   text: $stop
