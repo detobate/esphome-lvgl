@@ -78,7 +78,7 @@ lvgl:
               - label:
                   align: bottom_left
                   id: button_a1_label
-                  text: "Living Room Bright"
+                  text: "Living Room High"
             on_press:
               - homeassistant.action:
                   action: switch.toggle
@@ -234,6 +234,7 @@ lvgl:
                   align: center
                   id: button_c1_icon
                   text: $plex
+                  color: orange
             on_click:
               - homeassistant.action:
                   action: automation.trigger
@@ -309,6 +310,7 @@ lvgl:
                   align: center
                   id: button_d1_icon
                   text: $netflix
+                  color: red
             on_click:
               - homeassistant.action:
                   action: automation.trigger
@@ -378,7 +380,7 @@ lvgl:
             widgets:
               - label:
                   text_font: $icon_font
-                  align: top_left
+                  align: center
                   id: button_e1_icon
                   text: $lightbulb
               - label:
@@ -387,7 +389,7 @@ lvgl:
                   text: "Living Room Bright"
             on_press:
               - homeassistant.action:
-                  action: scene.turn_on
+                  action: scene.toggle
                   data:
                     entity_id: scene.living_room_bright
         # E2
@@ -400,7 +402,7 @@ lvgl:
             widgets:
               - label:
                   text_font: $icon_font
-                  align: top_left
+                  align: center
                   id: button_e2_icon
                   text: $nightlight
               - label:
@@ -409,7 +411,7 @@ lvgl:
                   text: "Living Room Low"
             on_press:
               - homeassistant.action:
-                  action: scene.turn_on
+                  action: scene.toggle
                   data:
                     entity_id: scene.living_room_dimmed
 
@@ -423,7 +425,7 @@ lvgl:
             widgets:
               - label:
                   text_font: $icon_font
-                  align: top_left
+                  align: center
                   id: button_e3_icon
                   text: $nightlight
               - label:
@@ -432,7 +434,7 @@ lvgl:
                   text: "Living Room Dim"
             on_press:
               - homeassistant.action:
-                  action: scene.turn_on
+                  action: scene.toggle
                   data:
                     entity_id: scene.living_room_super_low
         # E4
@@ -445,7 +447,7 @@ lvgl:
             widgets:
               - label:
                   text_font: $icon_font
-                  align: top_left
+                  align: center
                   id: button_e4_icon
                   text: $lightbulb_off
               - label:
@@ -454,6 +456,6 @@ lvgl:
                   text: "Living Room Off"
             on_press:
               - homeassistant.action:
-                  action: scene.turn_on
+                  action: scene.toggle
                   data:
                     entity_id: scene.living_room_off_scene
