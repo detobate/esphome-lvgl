@@ -90,7 +90,7 @@ lvgl:
             height: $button_height_single
             width: $button_width
             checkable: false
-            id: button_ba
+            id: button_a2
             styles: control
             widgets:
               - label:
@@ -413,22 +413,22 @@ lvgl:
                   data:
                     entity_id: scene.living_room_dimmed
 
-        # A3
+        # E3
         - button:
             height: $button_height_single
             width: $button_width
             checkable: true
-            id: button_a3
+            id: button_e3
             styles: control
             widgets:
               - label:
                   text_font: $icon_font
                   align: top_left
-                  id: button_a3_icon
+                  id: button_e3_icon
                   text: $nightlight
               - label:
                   align: bottom_left
-                  id: button_a3_label
+                  id: button_e3_label
                   text: "Living Room Dim"
             on_press:
               - homeassistant.action:
