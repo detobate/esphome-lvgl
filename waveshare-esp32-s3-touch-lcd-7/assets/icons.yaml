@@ -92,6 +92,7 @@ substitutions:
   plex:           "\U000F06BA"
   back:           "\U000F17B2"
   netflix:        "\U000F0746"
+  youtube:        "\U000F05C3"
   volume_high:    "\U000F057E"
   volume_minus:   "\U000F075E"
   volume_plus:    "\U000F075D"
