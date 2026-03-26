@@ -52,6 +52,10 @@ font:
       "\U000F06BA",  # mdi-plex
       "\U000F17B2",  # mdi-arrow-u-left-bottom-bold
       "\U000F0746",  # mdi-netflix
+      "\U000F057E",  # mdi-volume-high
+      "\U000F075E",  # mdi-volume-minus
+      "\U000F075D",  # mdi-volume-plus
+      "\U000F0581",  # mdi-volume-off
       ]
 
 
@@ -87,6 +91,10 @@ substitutions:
   plex:           "\U000F06BA"
   back:           "\U000F17B2"
   netflix:        "\U000F0746"
+  volume_high:    "\U000F057E"
+  volume_minus:   "\U000F075E"
+  volume_plus:    "\U000F075D"
+  volume_off:     "\U000F0581"
 
 
 

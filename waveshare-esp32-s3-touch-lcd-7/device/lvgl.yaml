@@ -180,67 +180,60 @@ lvgl:
         - button: 
             height: $button_height_single
             width: $button_width
-            checkable: true
+            checkable: false
             id: button_b2
             styles: control
             widgets:
               - label:
-                  text_font: $icon_font
-                  align: top_left
-                  text: $blinds_open
-              - label:
-                  align: bottom_left
-                  text: "B2"
+                  text_font: $icon_font_large
+                  align: center
+                  id: button_b2_icon
+                  text: $volume_plus
             on_click:
               - homeassistant.service:
-                  service: cover.set_cover_position
+                  service: automation.trigger
                   data:
-                    entity_id: cover.office_blind
-                    position: "66"
+                    entity_id: automation.sonos_volumeup
+
 
         # B3
         - button: 
             height: $button_height_single
             width: $button_width
-            checkable: true
+            checkable: false
             id: button_b3
             styles: control
             widgets:
               - label:
-                  text_font: $icon_font
-                  align: top_left
-                  text: $blinds_open
-              - label:
-                  align: bottom_left
-                  text: "B3"
+                  text_font: $icon_font_large
+                  align: center
+                  id: button_b3_icon
+                  text: $volume_minus
             on_click:
               - homeassistant.service:
-                  service: cover.set_cover_position
+                  service: automation.trigger
                   data:
-                    entity_id: cover.office_blind
-                    position: "33"
+                    entity_id: automation.sonos_volumedown
+
 
         # B4
         - button: 
             height: $button_height_single
             width: $button_width
-            checkable: true
+            checkable: false
             id: button_b4
             styles: control
             widgets:
               - label:
-                  text_font: $icon_font
-                  align: top_left
-                  text: $blinds_closed
-              - label:
-                  align: bottom_left
-                  text: "B4"
+                  text_font: $icon_font_large
+                  align: center
+                  id: button_b4_icon
+                  text: $volume_off
             on_click:
               - homeassistant.service:
-                  service: cover.set_cover_position
+                  service: automation.trigger
                   data:
-                    entity_id: cover.office_blind
-                    position: "0"
+                    entity_id: automation.sonos_mute
 
 
         # C1
