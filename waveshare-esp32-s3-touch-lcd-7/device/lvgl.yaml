@@ -63,7 +63,7 @@ lvgl:
       
       widgets:
         # A1
-        - button: 
+        - button:
             height: $button_height_single
             width: $button_width
             checkable: true
@@ -80,8 +80,8 @@ lvgl:
                   id: button_a1_label
                   text: "Living Room Bright"
             on_press:
-              - homeassistant.service:
-                  service: switch.toggle
+              - homeassistant.action:
+                  action: switch.toggle
                   data:
                     entity_id: scene.living_room_bright
 
@@ -89,27 +89,332 @@ lvgl:
         - button: 
             height: $button_height_single
             width: $button_width
+            checkable: false
+            id: button_ba
+            styles: control
+            widgets:
+              - label:
+                  text_font: $icon_font_large
+                  align: center
+                  id: button_a2_icon
+                  text: $volume_plus
+            on_click:
+              - homeassistant.action:
+                  action: automation.trigger
+                  data:
+                    entity_id: automation.sonos_volumeup
+
+
+        # A3
+        - button: 
+            height: $button_height_single
+            width: $button_width
+            checkable: false
+            id: button_a3
+            styles: control
+            widgets:
+              - label:
+                  text_font: $icon_font_large
+                  align: center
+                  id: button_a3_icon
+                  text: $volume_minus
+            on_click:
+              - homeassistant.action:
+                  action: automation.trigger
+                  data:
+                    entity_id: automation.sonos_volumedown
+
+
+        # A4
+        - button: 
+            height: $button_height_single
+            width: $button_width
+            checkable: false
+            id: button_a4
+            styles: control
+            widgets:
+              - label:
+                  text_font: $icon_font_large
+                  align: center
+                  id: button_a4_icon
+                  text: $volume_off
+            on_click:
+              - homeassistant.action:
+                  action: automation.trigger
+                  data:
+                    entity_id: automation.sonos_mute
+
+
+        # B1
+        - button: 
+            height: $button_height_single
+            width: $button_width
+            checkable: false
+            id: button_b1
+            styles: control
+            widgets:
+              - label:
+                  text_font: $icon_font_large
+                  align: center
+                  id: button_b1_icon
+                  text: $power
+            on_click:
+              - homeassistant.action:
+                  action: automation.trigger
+                  data:
+                    entity_id: automation.lgtv_power_toggle
+
+        # B2
+        - button: 
+            height: $button_height_single
+            width: $button_width
+            checkable: false
+            id: button_b2
+            styles: control
+            widgets:
+              - label:
+                  text_font: $icon_font_large
+                  align: center
+                  id: button_b2_icon
+                  text: $home
+            on_click:
+              - homeassistant.action:
+                  action: automation.trigger
+                  data:
+                    entity_id: automation.lgtv_home
+
+        # B3
+        - button: 
+            height: $button_height_single
+            width: $button_width
+            checkable: false
+            id: button_b3
+            styles: control
+            widgets:
+              - label:
+                  text_font: $icon_font_large
+                  align: center
+                  id: button_b3_icon
+                  text: $left
+            on_click:
+              - homeassistant.action:
+                  action: automation.trigger
+                  data:
+                    entity_id: automation.lgtv_left_arrow
+
+        # B4
+        - button: 
+            height: $button_height_single
+            width: $button_width
+            checkable: false
+            id: button_b4
+            styles: control
+            widgets:
+              - label:
+                  text_font: $icon_font_large
+                  align: center
+                  id: button_b4_icon
+                  text: $back
+            on_click:
+              - homeassistant.action:
+                  action: automation.trigger
+                  data:
+                    entity_id: automation.lgtv_back
+
+        # C1
+        - button: 
+            height: $button_height_single
+            width: $button_width
+            checkable: false
+            id: button_c1
+            styles: control
+            widgets:
+              - label:
+                  text_font: $icon_font_large
+                  align: center
+                  id: button_c1_icon
+                  text: $plex
+            on_click:
+              - homeassistant.action:
+                  action: automation.trigger
+                  data:
+                    entity_id: automation.lg_tv_source_plex
+
+        # C2
+        - button: 
+            height: $button_height_single
+            width: $button_width
+            checkable: false
+            id: button_c2
+            styles: control
+            widgets:
+              - label:
+                  text_font: $icon_font_large
+                  align: center
+                  id: button_c2_icon
+                  text: $up
+            on_click:
+              - homeassistant.action:
+                  action: automation.trigger
+                  data:
+                    entity_id: automation.lgtv_up_arrow
+
+        # C3
+        - button:
+            height: $button_height_single
+            width: $button_width
+            checkable: false
+            id: button_c3
+            styles: control
+            widgets:
+              - label:
+                  text_font: $icon_font_large
+                  align: center
+                  id: button_c3_icon
+                  text: $ok
+            on_click:
+              - homeassistant.action:
+                  action: automation.trigger
+                  data:
+                    entity_id: automation.lgtv_ok
+
+        # C4
+        - button:
+            height: $button_height_single
+            width: $button_width
+            checkable: false
+            id: button_c4
+            styles: control
+            widgets:
+              - label:
+                  text_font: $icon_font_large
+                  align: center
+                  id: button_c4_icon
+                  text: $down
+            on_click:
+              - homeassistant.action:
+                  action: automation.trigger
+                  data:
+                    entity_id: automation.lgtv_down_arrow
+        # D1
+        - button:
+            height: $button_height_single
+            width: $button_width
+            checkable: false
+            id: button_d1
+            styles: control
+            widgets:
+              - label:
+                  text_font: $icon_font_large
+                  align: center
+                  id: button_d1_icon
+                  text: $netflix
+            on_click:
+              - homeassistant.action:
+                  action: automation.trigger
+                  data:
+                    entity_id: automation.lg_tv_source_netflix
+        # D2
+        - button:
+            height: $button_height_single
+            width: $button_width
+            checkable: false
+            id: button_d2
+            styles: control
+            widgets:
+              - label:
+                  text_font: $icon_font_large
+                  align: center
+                  id: button_d2_icon
+                  text: $play_pause
+            on_click:
+              - homeassistant.action:
+                  action: automation.trigger
+                  data:
+                    entity_id: automation.lgtv_pause_toggle
+        # D3
+        - button:
+            height: $button_height_single
+            width: $button_width
+            checkable: false
+            id: button_d3
+            styles: control
+            widgets:
+              - label:
+                  text_font: $icon_font_large
+                  align: center
+                  id: button_d3_icon
+                  text: $right
+            on_click:
+              - homeassistant.action:
+                  action: automation.trigger
+                  data:
+                    entity_id: automation.lgtv_right_arrow
+        # D4
+        - button:
+            height: $button_height_single
+            width: $button_width
+            checkable: false
+            id: button_d4
+            styles: control
+            widgets:
+              - label:
+                  text_font: $icon_font_large
+                  align: center
+                  id: button_d4_icon
+                  text: $stop
+            on_click:
+              - homeassistant.action:
+                  action: automation.trigger
+                  data:
+                    entity_id: automation.lgtv_stop
+        # E1
+        - button:
+            height: $button_height_single
+            width: $button_width
             checkable: true
-            id: button_a2
+            id: button_e1
             styles: control
             widgets:
               - label:
                   text_font: $icon_font
                   align: top_left
-                  id: button_a2_icon
+                  id: button_e1_icon
+                  text: $lightbulb
+              - label:
+                  align: bottom_left
+                  id: button_e1_label
+                  text: "Living Room Bright"
+            on_press:
+              - homeassistant.action:
+                  action: scene.turn_on
+                  data:
+                    entity_id: scene.living_room_bright
+        # E2
+        - button:
+            height: $button_height_single
+            width: $button_width
+            checkable: true
+            id: button_e2
+            styles: control
+            widgets:
+              - label:
+                  text_font: $icon_font
+                  align: top_left
+                  id: button_e2_icon
                   text: $nightlight
               - label:
                   align: bottom_left
-                  id: button_a2_label
+                  id: button_e2_label
                   text: "Living Room Low"
             on_press:
-              - homeassistant.service:
-                  service: switch.toggle
+              - homeassistant.action:
+                  action: scene.turn_on
                   data:
                     entity_id: scene.living_room_dimmed
 
         # A3
-        - button: 
+        - button:
             height: $button_height_single
             width: $button_width
             checkable: true
@@ -126,336 +431,29 @@ lvgl:
                   id: button_a3_label
                   text: "Living Room Dim"
             on_press:
-              - homeassistant.service:
-                  service: switch.toggle
+              - homeassistant.action:
+                  action: scene.turn_on
                   data:
                     entity_id: scene.living_room_super_low
-
-        # A4
-        - button: 
-            height: $button_height_single
-            width: $button_width
-            checkable: true
-            id: button_a4
-            styles: control
-            widgets:
-              - label:
-                  text_font: $icon_font
-                  align: top_left
-                  id: button_a4_icon
-                  text: $lightbulb_off
-              - label:
-                  align: bottom_left
-                  id: button_a4_label
-                  text: "Living Room Off"
-            on_press:
-              - homeassistant.service:
-                  service: switch.toggle
-                  data:
-                    entity_id: scene.living_room_off_scene
-
-        # B1
-        - button: 
-            height: $button_height_single
-            width: $button_width
-            checkable: true
-            id: button_b1
-            styles: control
-            widgets:
-              - label:
-                  text_font: $icon_font
-                  align: top_left
-                  text: $blinds_open
-              - label:
-                  align: bottom_left
-                  text: "B1"
-            on_click:
-              - homeassistant.service:
-                  service: cover.set_cover_position
-                  data:
-                    entity_id: cover.office_blind
-                    position: "100"
-
-        # B2
-        - button: 
-            height: $button_height_single
-            width: $button_width
-            checkable: false
-            id: button_b2
-            styles: control
-            widgets:
-              - label:
-                  text_font: $icon_font_large
-                  align: center
-                  id: button_b2_icon
-                  text: $volume_plus
-            on_click:
-              - homeassistant.service:
-                  service: automation.trigger
-                  data:
-                    entity_id: automation.sonos_volumeup
-
-
-        # B3
-        - button: 
-            height: $button_height_single
-            width: $button_width
-            checkable: false
-            id: button_b3
-            styles: control
-            widgets:
-              - label:
-                  text_font: $icon_font_large
-                  align: center
-                  id: button_b3_icon
-                  text: $volume_minus
-            on_click:
-              - homeassistant.service:
-                  service: automation.trigger
-                  data:
-                    entity_id: automation.sonos_volumedown
-
-
-        # B4
-        - button: 
-            height: $button_height_single
-            width: $button_width
-            checkable: false
-            id: button_b4
-            styles: control
-            widgets:
-              - label:
-                  text_font: $icon_font_large
-                  align: center
-                  id: button_b4_icon
-                  text: $volume_off
-            on_click:
-              - homeassistant.service:
-                  service: automation.trigger
-                  data:
-                    entity_id: automation.sonos_mute
-
-
-        # C1
-        - button: 
-            height: $button_height_single
-            width: $button_width
-            checkable: false
-            id: button_c1
-            styles: control
-            widgets:
-              - label:
-                  text_font: $icon_font_large
-                  align: center
-                  id: button_c1_icon
-                  text: $power
-            on_click:
-              - homeassistant.action:
-                  action: automation.trigger
-                  data:
-                    entity_id: automation.lgtv_power_toggle
-
-        # C2
-        - button: 
-            height: $button_height_single
-            width: $button_width
-            checkable: false
-            id: button_c2
-            styles: control
-            widgets:
-              - label:
-                  text_font: $icon_font_large
-                  align: center
-                  id: button_c2_icon
-                  text: $home
-            on_click:
-              - homeassistant.service:
-                  service: automation.trigger
-                  data:
-                    entity_id: automation.lgtv_home
-
-        # C3
-        - button: 
-            height: $button_height_single
-            width: $button_width
-            checkable: false
-            id: button_c3
-            styles: control
-            widgets:
-              - label:
-                  text_font: $icon_font_large
-                  align: center
-                  id: button_c3_icon
-                  text: $left
-            on_click:
-              - homeassistant.service:
-                  service: automation.trigger
-                  data:
-                    entity_id: automation.lgtv_left_arrow
-
-        # C4
-        - button: 
-            height: $button_height_single
-            width: $button_width
-            checkable: false
-            id: button_c4
-            styles: control
-            widgets:
-              - label:
-                  text_font: $icon_font_large
-                  align: center
-                  id: button_c4_icon
-                  text: $back
-            on_click:
-              - homeassistant.service:
-                  service: automation.trigger
-                  data:
-                    entity_id: automation.lgtv_back
-
-        # D1
-        - button: 
-            height: $button_height_single
-            width: $button_width
-            checkable: false
-            id: button_d1
-            styles: control
-            widgets:
-              - label:
-                  text_font: $icon_font_large
-                  align: center
-                  id: button_d1_icon
-                  text: $plex
-            on_click:
-              - homeassistant.service:
-                  service: automation.trigger
-                  data:
-                    entity_id: automation.lg_tv_source_plex
-
-        # D2
-        - button: 
-            height: $button_height_single
-            width: $button_width
-            checkable: false
-            id: button_d2
-            styles: control
-            widgets:
-              - label:
-                  text_font: $icon_font_large
-                  align: center
-                  id: button_d2_icon
-                  text: $up
-            on_click:
-              - homeassistant.service:
-                  service: automation.trigger
-                  data:
-                    entity_id: automation.lgtv_up_arrow
-
-        # D3
-        - button:
-            height: $button_height_single
-            width: $button_width
-            checkable: false
-            id: button_d3
-            styles: control
-            widgets:
-              - label:
-                  text_font: $icon_font_large
-                  align: center
-                  id: button_d3_icon
-                  text: $ok
-            on_click:
-              - homeassistant.service:
-                  service: automation.trigger
-                  data:
-                    entity_id: automation.lgtv_ok
-
-        # D4
-        - button:
-            height: $button_height_single
-            width: $button_width
-            checkable: false
-            id: button_d4
-            styles: control
-            widgets:
-              - label:
-                  text_font: $icon_font_large
-                  align: center
-                  id: button_d4_icon
-                  text: $down
-            on_click:
-              - homeassistant.service:
-                  service: automation.trigger
-                  data:
-                    entity_id: automation.lgtv_down_arrow
-        # E1
-        - button:
-            height: $button_height_single
-            width: $button_width
-            checkable: false
-            id: button_e1
-            styles: control
-            widgets:
-              - label:
-                  text_font: $icon_font_large
-                  align: center
-                  id: button_e1_icon
-                  text: $netflix
-            on_click:
-              - homeassistant.service:
-                  service: automation.trigger
-                  data:
-                    entity_id: automation.lg_tv_source_netflix
-        # E2
-        - button:
-            height: $button_height_single
-            width: $button_width
-            checkable: false
-            id: button_e2
-            styles: control
-            widgets:
-              - label:
-                  text_font: $icon_font_large
-                  align: center
-                  id: button_e2_icon
-                  text: $play_pause
-            on_click:
-              - homeassistant.service:
-                  service: automation.trigger
-                  data:
-                    entity_id: automation.lgtv_pause_toggle
-        # E3
-        - button:
-            height: $button_height_single
-            width: $button_width
-            checkable: false
-            id: button_e3
-            styles: control
-            widgets:
-              - label:
-                  text_font: $icon_font_large
-                  align: center
-                  id: button_e3_icon
-                  text: $right
-            on_click:
-              - homeassistant.service:
-                  service: automation.trigger
-                  data:
-                    entity_id: automation.lgtv_right_arrow
         # E4
         - button:
             height: $button_height_single
             width: $button_width
-            checkable: false
+            checkable: true
             id: button_e4
             styles: control
             widgets:
               - label:
-                  text_font: $icon_font_large
-                  align: center
+                  text_font: $icon_font
+                  align: top_left
                   id: button_e4_icon
-                  text: $stop
-            on_click:
-              - homeassistant.service:
-                  service: automation.trigger
+                  text: $lightbulb_off
+              - label:
+                  align: bottom_left
+                  id: button_e4_label
+                  text: "Living Room Off"
+            on_press:
+              - homeassistant.action:
+                  action: scene.turn_on
                   data:
-                    entity_id: automation.lgtv_stop
+                    entity_id: scene.living_room_off_scene
