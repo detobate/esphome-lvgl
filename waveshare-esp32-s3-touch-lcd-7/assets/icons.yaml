@@ -81,7 +81,7 @@ substitutions:
   down:           "\U000F072E"
   left:           "\U000F0731"
   right:          "\U000F0734"
-  play-pause:     "\U000F040E"
+  play_pause:     "\U000F040E"
   ok:             "\U000F05E0"
   stop:           "\U000F04DB"
   plex:           "\U000F06BA"

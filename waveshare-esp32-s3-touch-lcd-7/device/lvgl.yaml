@@ -427,7 +427,7 @@ lvgl:
                   text_font: $icon_font_large
                   align: center
                   id: button_e2_icon
-                  text: $play-pause
+                  text: $play_pause
             on_click:
               - homeassistant.service:
                   service: automation.trigger
