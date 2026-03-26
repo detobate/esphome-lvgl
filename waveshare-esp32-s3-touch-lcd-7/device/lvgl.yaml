@@ -234,7 +234,7 @@ lvgl:
                   align: center
                   id: button_c1_icon
                   text: $plex
-                  color: orange
+                  text_color: orange
             on_click:
               - homeassistant.action:
                   action: automation.trigger
@@ -310,7 +310,7 @@ lvgl:
                   align: center
                   id: button_d1_icon
                   text: $netflix
-                  color: red
+                  text_color: red
             on_click:
               - homeassistant.action:
                   action: automation.trigger
