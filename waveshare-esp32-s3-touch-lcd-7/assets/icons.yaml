@@ -34,6 +34,27 @@ font:
       "\U000F05A9",  # mdi-wifi
       ]
 
+  - file: 'https://github.com/Templarian/MaterialDesign-Webfont/raw/v7.4.47/fonts/materialdesignicons-webfont.ttf'
+    id: icon_font_large
+    size: 50
+    bpp: 4
+    glyphs: [
+      "\U000F05A9",  # mdi-wifi
+      "\U000F0425",  # mdi-power
+      "\U000F0731",  # mdi-arrow-left-bold
+      "\U000F0734",  # mdi-arrow-right-bold
+      "\U000F0737",  # mdi-arrow-up-bold
+      "\U000F072E",  # mdi-arrow-down-bold
+      "\U000F04DB",  # mdi-stop
+      "\U000F040E",  # mdi-play-pause
+      "\U000F05E0",  # mdi-check-circle
+      "\U000F02DC",  # mdi-home
+      "\U000F06BA",  # mdi-plex
+      "\U000F17B2",  # mdi-arrow-u-left-bottom-bold
+      "\U000F0746",  # mdi-netflix
+      ]
+
+
 # Map icons to names
 substitutions:
   lightbulb:      "\U000F0335"
@@ -55,6 +76,17 @@ substitutions:
   power:          "\U000F0425"
   lightbulb_off:  "\U000F0E50"
   wifi:           "\U000F05A9"
+  home:           "\U000F02DC"
+  up:             "\U000F0737"
+  down:           "\U000F072E"
+  left:           "\U000F0731"
+  right:          "\U000F0734"
+  play-pause:     "\U000F040E"
+  ok:             "\U000F05E0"
+  stop:           "\U000F04DB"
+  plex:           "\U000F06BA"
+  back:           "\U000F17B2"
+  netflix:        "\U000F0746"
 
 
 

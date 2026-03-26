@@ -22,3 +22,5 @@ lvgl:
       text_font: icon_font
     - id: icon_font_small_style
       text_font: icon_font_small
+    - id: icon_font_large_style
+      text_font: icon_font_large

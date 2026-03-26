@@ -253,7 +253,7 @@ lvgl:
             widgets:
               # Icon (shown when OFF)
               - label:
-                  text_font: $icon_font
+                  text_font: $icon_font_large
                   align: center
                   id: button_c1_icon
                   text: $power
@@ -267,268 +267,205 @@ lvgl:
         - button: 
             height: $button_height_single
             width: $button_width
-            checkable: true
+            checkable: false
             id: button_c2
             styles: control
             widgets:
               # Icon (shown when OFF)
               - label:
-                  text_font: $icon_font
-                  align: top_left
+                  text_font: $icon_font_large
+                  align: center
                   id: button_c2_icon
-                  text: $filament
-              # Humidity (shown when ON)
-              - obj:
-                  align: top_left
-                  id: button_c2_container
-                  height: SIZE_CONTENT
-                  width: SIZE_CONTENT
-                  clickable: false
-                  layout:
-                    type: flex
-                    flex_flow: row
-                    flex_align_cross: end
-                  bg_opa: TRANSP
-                  border_width: 0
-                  pad_all: 0
-                  hidden: true
-                  widgets:
-                    - label:
-                        text_font: roboto36_font
-                        text_color: 0xFFFFFF
-                        id: dryer_humidity_label
-                        text: "--"
-                    - label:
-                        text_font: roboto17_font
-                        text_color: 0xFFFFFF
-                        text: "%"
-              - label:
-                  align: bottom_left
-                  text: "C2"
+                  text: $home
             on_click:
               - homeassistant.service:
-                  service: switch.toggle
+                  service: automation.trigger
                   data:
-                    entity_id: switch.office_filament_heater_893b
+                    entity_id: automation.lgtv_home
 
         # C3
         - button: 
             height: $button_height_single
             width: $button_width
-            checkable: true
+            checkable: false
             id: button_c3
             styles: control
             widgets:
+              # Icon (shown when OFF)
               - label:
-                  text_font: $icon_font
-                  align: top_left
-                  text: $aircon
-              - label:
-                  align: bottom_left
-                  text: "C3"
+                  text_font: $icon_font_large
+                  align: center
+                  id: button_c3_icon
+                  text: $left
             on_click:
               - homeassistant.service:
-                  service: script.office_air_conditioner
+                  service: automation.trigger
+                  data:
+                    entity_id: automation.lgtv_left_arrow
 
         # C4
         - button: 
             height: $button_height_single
             width: $button_width
-            checkable: true
+            checkable: false
             id: button_c4
             styles: control
             widgets:
               - label:
-                  text_font: $icon_font
-                  align: top_left
+                  text_font: $icon_font_large
+                  align: center
                   id: button_c4_icon
-                  text: $battery
-              - label:
-                  align: bottom_left
-                  id: button_c4_label
-                  text: "C4"
+                  text: $back
             on_click:
               - homeassistant.service:
-                  service: switch.toggle
+                  service: automation.trigger
                   data:
-                    entity_id: switch.battery_charger
+                    entity_id: automation.lgtv_back
 
         # D1
         - button: 
             height: $button_height_single
             width: $button_width
-            checkable: true
+            checkable: false
             id: button_d1
             styles: control
             widgets:
               - label:
-                  text_font: $icon_font
-                  align: top_left
+                  text_font: $icon_font_large
+                  align: center
                   id: button_d1_icon
-                  text: $package
-              - label:
-                  align: bottom_left
-                  id: button_d1_label
-                  text: "D1"
+                  text: $plex
             on_click:
               - homeassistant.service:
-                  service: light.toggle
+                  service: automation.trigger
                   data:
-                    entity_id: light.office_storage
+                    entity_id: automation.lg_tv_source_plex
 
         # D2
         - button: 
             height: $button_height_single
             width: $button_width
-            checkable: true
+            checkable: false
             id: button_d2
             styles: control
             widgets:
               - label:
-                  text_font: $icon_font
-                  align: top_left
+                  text_font: $icon_font_large
+                  align: center
                   id: button_d2_icon
-                  text: $network
-              - label:
-                  align: bottom_left
-                  id: button_d2_label
-                  text: "D2"
+                  text: $up
             on_click:
               - homeassistant.service:
-                  service: light.toggle
+                  service: automation.trigger
                   data:
-                    entity_id: light.office_network_rack
+                    entity_id: automation.lgtv_up_arrow
 
         # D3
         - button:
             height: $button_height_single
             width: $button_width
-            checkable: true
+            checkable: false
             id: button_d3
             styles: control
             widgets:
               - label:
-                  text_font: $icon_font
-                  align: top_left
+                  text_font: $icon_font_large
+                  align: center
                   id: button_d3_icon
-                  text: $package
-              - label:
-                  align: bottom_left
-                  id: button_d3_label
-                  text: "D3"
+                  text: $ok
             on_click:
               - homeassistant.service:
-                  service: light.toggle
+                  service: automation.trigger
                   data:
-                    entity_id: light.office_storage
+                    entity_id: automation.lgtv_ok
 
         # D4
         - button:
             height: $button_height_single
             width: $button_width
-            checkable: true
+            checkable: false
             id: button_d4
             styles: control
             widgets:
               - label:
-                  text_font: $icon_font
-                  align: top_left
+                  text_font: $icon_font_large
+                  align: center
                   id: button_d4_icon
-                  text: $network
-              - label:
-                  align: bottom_left
-                  id: button_d4_label
-                  text: "D4"
+                  text: $down
             on_click:
               - homeassistant.service:
-                  service: light.toggle
+                  service: automation.trigger
                   data:
-                    entity_id: light.office_network_rack
+                    entity_id: automation.lgtv_down_arrow
         # E1
         - button:
             height: $button_height_single
             width: $button_width
-            checkable: true
+            checkable: false
             id: button_e1
             styles: control
             widgets:
               - label:
-                  text_font: $icon_font
-                  align: top_left
+                  text_font: $icon_font_large
+                  align: center
                   id: button_e1_icon
-                  text: $network
-              - label:
-                  align: bottom_left
-                  id: button_e1_label
-                  text: "E1"
+                  text: $netflix
             on_click:
               - homeassistant.service:
-                  service: light.toggle
+                  service: automation.trigger
                   data:
-                    entity_id: light.office_network_rack
+                    entity_id: automation.lg_tv_source_netflix
         # E2
         - button:
             height: $button_height_single
             width: $button_width
-            checkable: true
+            checkable: false
             id: button_e2
             styles: control
             widgets:
               - label:
-                  text_font: $icon_font
-                  align: top_left
+                  text_font: $icon_font_large
+                  align: center
                   id: button_e2_icon
-                  text: $network
-              - label:
-                  align: bottom_left
-                  id: button_e2_label
-                  text: "E2"
+                  text: $play-pause
             on_click:
               - homeassistant.service:
-                  service: light.toggle
+                  service: automation.trigger
                   data:
-                    entity_id: light.office_network_rack
+                    entity_id: automation.lgtv_pause_toggle
         # E3
         - button:
             height: $button_height_single
             width: $button_width
-            checkable: true
+            checkable: false
             id: button_e3
             styles: control
             widgets:
               - label:
-                  text_font: $icon_font
-                  align: top_left
+                  text_font: $icon_font_large
+                  align: center
                   id: button_e3_icon
-                  text: $network
-              - label:
-                  align: bottom_left
-                  id: button_e3_label
-                  text: "E3"
+                  text: $right
             on_click:
               - homeassistant.service:
-                  service: light.toggle
+                  service: automation.trigger
                   data:
-                    entity_id: light.office_network_rack
+                    entity_id: automation.lgtv_right_arrow
         # E4
         - button:
             height: $button_height_single
             width: $button_width
-            checkable: true
+            checkable: false
             id: button_e4
             styles: control
             widgets:
               - label:
-                  text_font: $icon_font
-                  align: top_left
+                  text_font: $icon_font_large
+                  align: center
                   id: button_e4_icon
-                  text: $network
-              - label:
-                  align: bottom_left
-                  id: button_e4_label
-                  text: "E4"
+                  text: $stop
             on_click:
               - homeassistant.service:
-                  service: light.toggle
+                  service: automation.trigger
                   data:
-                    entity_id: light.office_network_rack
+                    entity_id: automation.lgtv_stop

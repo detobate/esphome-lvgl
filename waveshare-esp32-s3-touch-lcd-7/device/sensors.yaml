@@ -91,30 +91,6 @@ binary_sensor:
           state:
             checked: !lambda return x;
 
-  # Office Aircon
-  - platform: homeassistant
-    id: office_air_conditioner
-    entity_id: switch.office_air_conditioner
-    trigger_on_initial_state: true
-    on_state:
-      then:
-        lvgl.widget.update:
-          id: button_c3
-          state:
-            checked: !lambda return x;
-
-  # Battery Charger
-  - platform: homeassistant
-    id: office_battery_charger
-    entity_id: switch.battery_charger
-    trigger_on_initial_state: true
-    on_state:
-      then:
-        lvgl.widget.update:
-          id: button_c4
-          state:
-            checked: !lambda return x;
-
   # Office Blind 100% (Open)
   - platform: template
     id: office_blind_100
@@ -172,52 +148,5 @@ binary_sensor:
       then:
         lvgl.widget.update:
           id: button_b4
-          state:
-            checked: !lambda return x;
-
-  # Office Storage Lights
-  - platform: homeassistant
-    id: office_storage_lights
-    entity_id: light.office_storage
-    trigger_on_initial_state: true
-    on_state:
-      then:
-        lvgl.widget.update:
-          id: button_d1
-          state:
-            checked: !lambda return x;
-
-  # Network Rack
-  - platform: homeassistant
-    id: network_rack
-    entity_id: light.office_network_rack
-    trigger_on_initial_state: true
-    on_state:
-      then:
-        lvgl.widget.update:
-          id: button_d2
-          state:
-            checked: !lambda return x;
-
-  # D3
-  - platform: homeassistant
-    id: network_rack2
-    entity_id: light.office_network_rack
-    trigger_on_initial_state: true
-    on_state:
-      then:
-        lvgl.widget.update:
-          id: button_d3
-          state:
-            checked: !lambda return x;
-  # D4
-  - platform: homeassistant
-    id: network_rack3
-    entity_id: light.office_network_rack
-    trigger_on_initial_state: true
-    on_state:
-      then:
-        lvgl.widget.update:
-          id: button_d4
           state:
             checked: !lambda return x;
