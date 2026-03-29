@@ -371,7 +371,7 @@ lvgl:
         - button:
             height: $button_height_single
             width: $button_width
-            checkable: true
+            checkable: false
             id: button_e1
             styles: control
             widgets:
@@ -386,14 +386,14 @@ lvgl:
                   text: "Living Room High"
             on_press:
               - homeassistant.action:
-                  action: scene.toggle
+                  action: scene.turn_on
                   data:
                     entity_id: scene.living_room_bright
         # E2
         - button:
             height: $button_height_single
             width: $button_width
-            checkable: true
+            checkable: false
             id: button_e2
             styles: control
             widgets:
@@ -408,7 +408,7 @@ lvgl:
                   text: "Living Room Low"
             on_press:
               - homeassistant.action:
-                  action: scene.toggle
+                  action: scene.turn_on
                   data:
                     entity_id: scene.living_room_dimmed
 
@@ -416,7 +416,7 @@ lvgl:
         - button:
             height: $button_height_single
             width: $button_width
-            checkable: true
+            checkable: false
             id: button_e3
             styles: control
             widgets:
@@ -431,14 +431,14 @@ lvgl:
                   text: "Living Room Dim"
             on_press:
               - homeassistant.action:
-                  action: scene.toggle
+                  action: scene.turn_on
                   data:
                     entity_id: scene.living_room_super_low
         # E4
         - button:
             height: $button_height_single
             width: $button_width
-            checkable: true
+            checkable: false
             id: button_e4
             styles: control
             widgets:
@@ -453,6 +453,6 @@ lvgl:
                   text: "Living Room Off"
             on_press:
               - homeassistant.action:
-                  action: scene.toggle
+                  action: scene.turn_on
                   data:
                     entity_id: scene.living_room_off_scene
